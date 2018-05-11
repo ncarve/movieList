@@ -23,7 +23,7 @@ function loadFile(path) {
   log.debug(`Loading file at ${path}`);
   if(!fs.existsSync(path))
     throw new Error(`File ${path} not found!`);
-  return JSON.parse(fs.readFileSync(path, {encoding: "utf8"}))
+  return fs.readFileSync(path, {encoding: "utf8"})
 }
 
 function loadJsonFile(path) {
